@@ -1,0 +1,30 @@
+<astro-heart>
+  <button aria-label="Toggle theme">Toggle Theme</button>
+</astro-heart>
+
+<script>
+  // defines the behaviour of our new component
+  class AstroHeart extends HTMLElement {
+    constructor() {
+      super();
+
+      const themeButton = this.querySelector("button");
+      const body = document.body;
+
+      if (themeButton) {
+        themeButton.addEventListener("click", () => {
+          if (body.classList.contains("light")) {
+            body.classList.remove("light");
+            body.classList.add("theme-dark");
+          } else {
+            body.classList.remove("theme-dark");
+            body.classList.add("light");
+          }
+        });
+      }
+    }
+  }
+
+  // Tell the browser to use our AstroHeart class for <astro-heart> elements.
+  customElements.define('astro-heart', AstroHeart);
+</script>
