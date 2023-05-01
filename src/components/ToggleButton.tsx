@@ -1,6 +1,7 @@
 export const ThemeToggleButton = () => {
   return (
     <button
+      data-testid="theme-btn"
       id="theme-btn"
       className="focus-outline"
       title="Toggles light & dark"

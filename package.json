@@ -1,6 +1,6 @@
 {
   "name": "oana-land",
-  "type": "module",
+  "type": "commonjs",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "pnpm playwright test"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.18.4",
@@ -26,6 +27,7 @@
     "rollup": "^3.21.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.33.0",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
