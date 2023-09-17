@@ -1,0 +1,80 @@
+---
+import { Plants, XataClient } from "../../xata";
+import Input from "@mui/joy/Input";
+import Textarea from "@mui/joy/Textarea";
+import Stack from "@mui/joy/Stack";
+import Button from "@mui/joy/Button";
+
+const xata = new XataClient({
+  apiKey: import.meta.env.XATA_API_KEY,
+  branch: import.meta.env.XATA_BRANCH,
+});
+
+type PlantFormData = Omit<Plants, "id" | "added_at_date">;
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name") as string;
+    const description = data.get("description") as string;
+    const quantity = Number(data.get("quantity"));
+    const category = data.get("category") as string;
+    const newPlant: PlantFormData = {
+      name,
+      description,
+      quantity,
+      category,
+      image: undefined,
+    };
+
+    const createPlant = async (plant: PlantFormData) => {
+      const response = await xata.db.plants.create({
+        name: plant.name,
+        category: plant.category,
+        quantity: Number(plant.quantity),
+        description: plant.description,
+      });
+
+      console.log("xata create record response: ", response);
+    };
+
+    createPlant(newPlant);
+
+    console.log("wooo form plant: ", newPlant);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.log("Oops, something went wrong in astro AddPlantForm", error);
+    }
+  }
+}
+---
+
+<form method="POST">
+  <Stack spacing={2}>
+    <label for="name">Name</label>
+    <Input id="name" name="name" type="text" />
+
+    <label for="quantity">Quantity</label>
+    <Input id="quantity" name="quantity" type="numeric" />
+
+    <label for="category">Category</label>
+    <select name="category" id="category">
+      <option value="vegetable">Vegetable</option>
+      <option value="flower">Flower</option>
+      <option value="herb">Herb</option>
+      <option value="fruit">Fruit</option>
+    </select>
+
+    <label for="description">Description</label>
+    <Textarea name="description" minRows={4} />
+
+    <Button type="submit">Add</Button>
+  </Stack>
+</form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

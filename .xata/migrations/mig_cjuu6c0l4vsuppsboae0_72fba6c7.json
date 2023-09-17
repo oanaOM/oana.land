@@ -1,0 +1,16 @@
+{
+  "id": "mig_cjuu6c0l4vsuppsboae0",
+  "parentID": "mig_cjuu65ol4vsuppsboad0",
+  "checksum": "1:72fba6c76820f70f37ac386297f45f51860bb3a64301bba1585a462fae955547",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Catergory",
+          "type": "string"
+        },
+        "table": "garden"
+      }
+    }
+  ]
+}

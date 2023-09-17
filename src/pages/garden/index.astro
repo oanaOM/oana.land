@@ -1,0 +1,44 @@
+---
+import { getXataClient } from "../../xata";
+import MainLayout from "../../layouts/MainLayout.astro";
+import { Input, Link, Box } from "@mui/joy";
+
+const xata = getXataClient();
+
+let plants = null;
+
+const search = Astro.url.searchParams.get("q")! || "";
+if (search) {
+  plants = await xata.db.plants.search(search, { fuzziness: 2 });
+} else {
+  plants = await xata.db.plants.getAll();
+}
+---
+
+<MainLayout>
+  <section>
+    <h1>Garden</h1>
+    <Box
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-between"
+      sx={{ marginBottom: "2rem" }}
+    >
+      <form action="/garden">
+        <Input name="q" value={search} placeholder="Search..." />
+      </form>
+      <Link href="/garden/add">Add new plant</Link>
+    </Box>
+    {plants.length === 0 && <p>There are no plants in the garden :( </p>}
+    {
+      plants.map((plant) => (
+        <div>
+          <div id={plant.id}>
+            🌱 <a href={`garden/${plant.id}`}> {plant.name}</a>, Category:
+            {plant.category}: No. {plant.quantity}
+          </div>
+        </div>
+      ))
+    }
+  </section>
+</MainLayout>

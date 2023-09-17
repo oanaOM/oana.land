@@ -1,0 +1,21 @@
+---
+// import AddPlantForm from "../../components/garden/AddPlantForm.astro";
+import { AddPlantForm } from "../../components/garden/AddPlantForm";
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <section>
+    <h1>Garden</h1>
+    <a href="/garden"> &larr; Back to the garden</a>
+    <h3>Add a new plant</h3>
+    <AddPlantForm client:load />
+  </section>
+</MainLayout>
+
+<style>
+  a {
+    margin: 2rem 0;
+    display: block;
+  }
+</style>

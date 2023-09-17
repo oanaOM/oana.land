@@ -1,0 +1,16 @@
+{
+  "id": "mig_ck0onrestt6k7dop8r10",
+  "parentID": "mig_ck0oniustt6k7dop8r00",
+  "checksum": "1:f0f9c5a7b89a565ed46985131d4d9abd722816ecc106cf20320b15f738ac4ada",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "image",
+          "type": "file[]"
+        },
+        "table": "plants"
+      }
+    }
+  ]
+}

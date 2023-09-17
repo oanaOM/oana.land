@@ -1,0 +1,16 @@
+{
+  "id": "mig_ck0oo0a98ktldhtk5cg0",
+  "parentID": "mig_ck0onrestt6k7dop8r10",
+  "checksum": "1:5047edad64b152d708e7286870f59dfd84c68182c94379c7ec1d35caf7d7074c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "description",
+          "type": "text"
+        },
+        "table": "plants"
+      }
+    }
+  ]
+}

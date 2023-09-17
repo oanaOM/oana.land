@@ -1,0 +1,39 @@
+{
+    "tables": [
+        {
+            "name": "plants",
+            "columns": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "added_at_date",
+                    "type": "datetime",
+                    "notNull": true,
+                    "defaultValue": "now"
+                },
+                {
+                    "name": "category",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "text"
+                },
+                {
+                    "name": "image",
+                    "type": "file"
+                },
+                {
+                    "name": "quantity",
+                    "type": "int"
+                },
+                {
+                    "name": "labels",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

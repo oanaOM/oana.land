@@ -1,0 +1,18 @@
+{
+  "id": "mig_cjuu65ol4vsuppsboad0",
+  "parentID": "mig_cjusbk0b6896mhqsh7d0",
+  "checksum": "1:9fbcc0862200d7bb4fe1520fa9e8359e52764c3776b17c95344291449c614860",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Green plant"
+        },
+        "table": "garden"
+      }
+    }
+  ]
+}

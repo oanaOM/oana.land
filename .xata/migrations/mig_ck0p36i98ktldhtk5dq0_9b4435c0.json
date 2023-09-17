@@ -1,0 +1,13 @@
+{
+  "id": "mig_ck0p36i98ktldhtk5dq0",
+  "parentID": "mig_ck0p1dn9qe6asd8t5ipg",
+  "checksum": "1:9b4435c055f0de6680cb5fb137b2e963b1b9b619429a4dbb048c91e4fe2f4757",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "plants",
+        "oldName": "Plants"
+      }
+    }
+  ]
+}

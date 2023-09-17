@@ -1,0 +1,18 @@
+{
+  "id": "mig_ck0ondestt6k7dop8qv0",
+  "parentID": "mig_ck0on16stt6k7dop8qu0",
+  "checksum": "1:964eead5265bb23fbabf74fabef0680f28a6beebaf74f20f6b29225cbbe3271b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "added_at_date",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "plants"
+      }
+    }
+  ]
+}

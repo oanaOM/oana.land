@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Oana-s-workspace-qj71f1.eu-west-1.xata.sh/db/oana-land",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

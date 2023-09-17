@@ -1,0 +1,77 @@
+{
+  "id": "mig_ck0p1dn9qe6asd8t5ipg",
+  "parentID": "mig_ck0os1mstt6k7dop8se0",
+  "checksum": "1:dcf5911dcf7bbda961cc505ad45917f696fda84037debaf7dc881cc6a669e779",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string"
+        },
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "added_at_date",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "category",
+          "type": "string"
+        },
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "description",
+          "type": "text"
+        },
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "image",
+          "type": "file"
+        },
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "quantity",
+          "type": "int"
+        },
+        "table": "Plants"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "labels",
+          "type": "string"
+        },
+        "table": "Plants"
+      }
+    }
+  ]
+}

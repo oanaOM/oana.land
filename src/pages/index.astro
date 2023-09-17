@@ -6,16 +6,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import "@fontsource/sono";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-      <Header title={SITE_TITLE}/>
-      <main>
-        <h1>Hello</h1>
-      </main>
-      <Footer />
-    </body>
+    <Header title={SITE_TITLE} client:load />
+    <main class="bg-grid">
+      <section>
+        <div>
+          <h1>Welcome</h1>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>

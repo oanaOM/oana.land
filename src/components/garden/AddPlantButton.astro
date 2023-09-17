@@ -1,0 +1,23 @@
+---
+import React from "react";
+import DialogContent from "@mui/joy/DialogContent";
+import ModalClose from "@mui/joy/ModalClose";
+import Button from "@mui/joy/Button";
+import DialogTitle from "@mui/joy/DialogTitle";
+import Modal from "@mui/joy/Modal";
+import ModalDialog from "@mui/joy/ModalDialog";
+import AddPlantForm from "./AddPlantForm.astro";
+---
+
+<React.Fragment>
+  <Button onClick={() => {}}>Add new plant</Button>
+  <Modal keepMounted open={false} onClose={() => {}}>
+    <ModalDialog>
+      <ModalClose />
+      <DialogTitle>Add a new plant</DialogTitle>
+      <DialogContent>
+        <!-- <AddPlantForm /> -->
+      </DialogContent>
+    </ModalDialog>
+  </Modal>
+</React.Fragment>

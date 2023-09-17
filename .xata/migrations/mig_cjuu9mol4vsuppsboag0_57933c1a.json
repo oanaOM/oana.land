@@ -1,0 +1,13 @@
+{
+  "id": "mig_cjuu9mol4vsuppsboag0",
+  "parentID": "mig_cjuu81gl4vsuppsboaf0",
+  "checksum": "1:57933c1ae98f5b228f07bb13d86b1c36b93ed8bc9aa3d9024842bd91e8518a7b",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "plants",
+        "oldName": "garden"
+      }
+    }
+  ]
+}

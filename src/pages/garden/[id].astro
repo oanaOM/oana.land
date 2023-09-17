@@ -1,0 +1,31 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { XataClient } from "../../xata";
+
+export async function getStaticPaths() {
+  const xata = new XataClient({
+    apiKey: import.meta.env.XATA_API_KEY,
+    branch: import.meta.env.XATA_BRANCH,
+  });
+
+  const plants = await xata.db.plants.getAll();
+
+  const routes = plants.map(({ id, name }) => {
+    return {
+      params: { id },
+      props: { name },
+    };
+  });
+
+  return routes;
+}
+
+const plant = Astro.props;
+---
+
+<MainLayout title={plant.name}>
+  <section>
+    <a href="/garden"> &larr; Back to the garden</a>
+    <h2>Hello {plant.name}</h2>
+  </section>
+</MainLayout>
