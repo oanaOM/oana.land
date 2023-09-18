@@ -5,6 +5,9 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   root: true,
   rules: {
-    "quotes": ["error", "double"],
-  }
+    quotes: ["error", "double"],
+    "no-underscore-dangle": ["error"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+  },
 };

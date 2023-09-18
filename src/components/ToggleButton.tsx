@@ -4,7 +4,7 @@ export const ThemeToggleButton = () => {
       id="theme-btn"
       className="focus-outline"
       title="Toggles light & dark"
-      aria-label="auto"
+      aria-label="light"
       aria-live="polite"
     >
       <svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
