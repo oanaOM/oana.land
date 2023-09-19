@@ -1,21 +1,28 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { ThemeToggleButton } from "./ToggleButton";
+
+import "../styles/theme.css";
 ---
 
 <header>
   <nav>
     <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <!-- <HeaderLink href="/about">About</HeaderLink> -->
-    <ThemeToggleButton/>
+    <HeaderLink href="/garden">Garden</HeaderLink>
+    <ThemeToggleButton client:load />
   </nav>
 </header>
 <style>
   header {
-    margin: 0em 0 2em;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+    text-align: right;
   }
-  h2 {
-    margin: 0.5em 0;
+
+  nav {
+    padding: 1.5rem 0;
+    margin: 0 3rem;
+    text-align: right;
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr 0.25fr;
   }
 </style>
