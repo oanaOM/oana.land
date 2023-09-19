@@ -1,21 +1,10 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import "@fontsource/sono";
+import { Greetings } from "../components/Greetings";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-      <Header title={SITE_TITLE}/>
-      <main>
-        <h1>Hello</h1>
-      </main>
-      <Footer />
-    </body>
-</html>
+<MainLayout>
+  <section>
+    <Greetings client:load />
+  </section>
+</MainLayout>

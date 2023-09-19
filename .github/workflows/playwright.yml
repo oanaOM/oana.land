@@ -16,7 +16,7 @@ jobs:
         uses: pnpm/action-setup@v2.2.1
         id: pnpm-install
         with:
-          version: 7
+          version: 8
           run_install: false
 
       - name: Install Node.js
@@ -29,10 +29,10 @@ jobs:
         run: pnpm install
 
       - name: Install Playwright Browsers
-        run: pnpm dlx playwright install --with-deps
+        run: pnpm playwright install --with-deps
 
       - name: Run Playwright tests
-        run: pnpm dlx playwright test
+        run: cd test && pnpm playwright test
 
       - uses: actions/upload-artifact@v3
         if: always()
