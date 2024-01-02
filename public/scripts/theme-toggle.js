@@ -1,7 +1,3 @@
-enum Theme {
-  Light = "light",
-  Dark = "dark",
-}
 
 const currentTheme = localStorage.getItem("theme");
 
@@ -9,8 +5,8 @@ function getPreferredTheme() {
   if (currentTheme) return currentTheme;
 
   return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? Theme.Dark
-    : Theme.Light;
+    ? "dark"
+    : window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "auto";
 }
 let themeValue = getPreferredTheme();
 
@@ -33,7 +29,7 @@ window.onload = () => {
   reflectPreference();
 
   document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    themeValue = themeValue === Theme.Light ? Theme.Dark : Theme.Light;
+    themeValue = themeValue === "light" ? "dark" : "light";
     setPreference();
   });
 };
@@ -41,6 +37,6 @@ window.onload = () => {
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", ({ matches: isDark }) => {
-    themeValue = isDark ? Theme.Dark : Theme.Light;
+    themeValue = isDark ? "dark" : "light";
     setPreference();
   });
