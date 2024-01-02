@@ -19,7 +19,6 @@
     "@fontsource/sono": "^4.5.1",
     "@nanostores/react": "^0.5.0",
     "@playwright/test": "^1.38.0",
-    "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
     "astro": "^4.0.9",
     "nanostores": "^0.8.1",
@@ -29,6 +28,7 @@
     "rollup": "^3.21.2"
   },
   "devDependencies": {
+    "@types/react": "^18.2.46",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
