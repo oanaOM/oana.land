@@ -8,13 +8,14 @@ html[data-theme="dark"] {
   --text-main: rgb(229, 233, 240);
   --text-main-rgba: rgba(229, 223, 240, 0.15);
 }
+
 html[data-theme="light"] {
-  --background-body: #f1f0f0; /* https://www.canva.com/colors/color-meanings/cream/ */
-  --text-main: rgb(
-    18,
-    38,
-    32
-  ); /* https://www.canva.com/colors/color-meanings/charcoal/ */
+  --background-body: #f1f0f0;
+  /* https://www.canva.com/colors/color-meanings/cream/ */
+  --text-main: rgb(18,
+      38,
+      32);
+  /* https://www.canva.com/colors/color-meanings/charcoal/ */
   --text-main-rgba: rgba(18, 38, 32, 0.15);
 }
 
@@ -44,10 +45,8 @@ main {
 }
 
 section {
-  padding: 2rem 0;
-  width: 645px;
-  height: 150vh;
-  margin: 0 auto;
+  padding: 3rem 12rem;
+  min-height: 100vh;
 }
 
 h1,
@@ -65,7 +64,7 @@ h6 {
 h1 {
   font-family: var(--font-family-serif);
   font-size: 4em;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.25em 0;
 }
 
 h2 {
@@ -250,30 +249,24 @@ td {
 
 .bg-grid {
   background-size: 25px 25px;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       var(--text-main-rgba) 1px,
-      transparent 1px
-    ),
+      transparent 1px),
     linear-gradient(to bottom, var(--text-main-rgba) 1px, transparent 1px);
   background-position: top center;
   image-rendering: pixelated;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    0%,
-    white,
-    90%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    0%,
-    white,
-    90%,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent,
+      0%,
+      white,
+      90%,
+      transparent);
+  mask-image: linear-gradient(to bottom,
+      transparent,
+      0%,
+      white,
+      90%,
+      transparent);
 }
 
 /* THEME */

@@ -24,5 +24,5 @@ export function Greetings() {
     fetchGreeting();
   }, []);
 
-  return <h1>{greeting}</h1>;
+  return <h1>{greeting}👋</h1>;
 }

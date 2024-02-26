@@ -1,10 +1,36 @@
 ---
-import { Greetings } from "../components/Greetings";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
   <section>
-    <Greetings client:load />
+    <div>
+      <h1>Oana</h1>
+      <h3><i>Software Engineer</i></h3>
+    </div>
+    <div class="img-container"></div>
   </section>
 </MainLayout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: space-between;
+    padding: 3rem 12rem;
+    min-height: 100vh;
+  }
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-image: url("/public/assets/oana_bike.jpg");
+    display: block;
+    background-position-x: -320px;
+    background-position-y: -120px;
+    border: 2px solid var(--text-main);
+  }
+</style>
